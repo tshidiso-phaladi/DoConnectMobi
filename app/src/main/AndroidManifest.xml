@@ -15,6 +15,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegistrationActivity" />
+        <activity
+            android:name=".AppointmentsActivity"
+            android:label="@string/title_activity_appointments"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BookAppointmentActivity"
+            android:label="@string/title_activity_book_appointment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PatientProfileActivity"
+            android:label="@string/title_activity_patient_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DoctorProfileActivity"
+            android:label="@string/title_activity_doctor_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewMedicalHistoryActivity"
+            android:label="@string/title_activity_view_medical_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewMedicalHistoryItemActivity"
+            android:label="@string/title_activity_view_medical_history_item"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
