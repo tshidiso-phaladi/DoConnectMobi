@@ -9,7 +9,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/apache-httpcomponents-httpclient" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/commons-logging-1.1.1" />
+            <option value="$PROJECT_DIR$/google-http-client-1.15.0-rc" />
+            <option value="$PROJECT_DIR$/google-http-client-android-1.15.0-rc" />
+            <option value="$PROJECT_DIR$/gson-2.1" />
+            <option value="$PROJECT_DIR$/httpclient-4.0.1" />
+            <option value="$PROJECT_DIR$/httpcore-4.0.1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
