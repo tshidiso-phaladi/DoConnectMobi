@@ -10,6 +10,13 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
             <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.LOGINACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PatientProfile">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
