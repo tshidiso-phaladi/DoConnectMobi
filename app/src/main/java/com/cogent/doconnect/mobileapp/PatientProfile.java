@@ -65,17 +65,24 @@ public class PatientProfile extends AppCompatActivity {
 }
 class LoadProfile extends AsyncTask<String, String, String> {
 
+    Patient profile;
+
+    public LoadProfile()
+    {
+
+    }
+
     /**
      * Before starting background thread Show Progress Dialog
      * */
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        pDialog = new ProgressDialog(PatientProfile.this);
-        pDialog.setMessage("Loading Profile ...");
-        pDialog.setIndeterminate(false);
-        pDialog.setCancelable(false);
-        pDialog.show();
+        //pDialog = new ProgressDialog(PatientProfile.this);
+        //pDialog.setMessage("Loading Profile ...");
+        //pDialog.setIndeterminate(false);
+        //pDialog.setCancelable(false);
+        //pDialog.show();
     }
 
     /**
@@ -86,7 +93,7 @@ class LoadProfile extends AsyncTask<String, String, String> {
     protected String doInBackground(String... args)
     {
         // Building Parameters
-        Patient profile = new Patient();
+         profile = new Patient();
 
          profile = getPatientProfile();
 
@@ -102,9 +109,9 @@ class LoadProfile extends AsyncTask<String, String, String> {
     protected void onPostExecute(String file_url)
     {
         // dismiss the dialog after getting all products
-        pDialog.dismiss();
+        //pDialog.dismiss();
         // updating UI from Background Thread
-        PatientID.setText("");
+        PatientID.setText(profile.GetFirstName());
 
     }
     private String RetrieveProfile()
@@ -117,14 +124,12 @@ class LoadProfile extends AsyncTask<String, String, String> {
 
             DefaultHttpClient httpClient=new DefaultHttpClient();
 
-            String params =  "{}";
-
             //Connect to the server
-            HttpPost httpPost = new HttpPost("192.168.43.145/Service/InfoServ.asmx?op=GetPatientProfile");
+            HttpPost httpPost = new HttpPost("http://10.1.2.190/Service/InfoServ.asmx/GetPatientProfile?wsdl");
             //http://localhost/Service/InfoServ.asmx?op=GetPatientProfile
 
-            List<NameValuePair> params = new ArrayList<NameValuePair>(2);
-            params.add(new BasicNameValuePair("PatId", "2"));
+            List<NameValuePair> params = new ArrayList<NameValuePair>(1);
+            params.add(new BasicNameValuePair("id", "2"));
             //params.add(new BasicNameValuePair("param-2", "Hello!"));
             httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
             //Get the response
@@ -194,7 +199,7 @@ class LoadProfile extends AsyncTask<String, String, String> {
                 //JSONArray jArray = new JSONArray(result);
                 JSONObject json_data = new JSONObject(result);
                 //JSONObject json_data = jArray.getJSONObject(0);
-                patient.SetFirstName(json_data.getString("CompAuthID"));
+                patient.SetFirstName(json_data.getString("FirstName"));
 //                UserProfile.setAuthCompIDno(json_data.getString("IDnumber"));
 //                UserProfile.setAuthCompFirstName(json_data.getString("FirstName"));
 //                UserProfile.setAuthCompMiddleName(json_data.getString("MiddleName"));

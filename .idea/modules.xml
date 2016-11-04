@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DoConnectMobi.iml" filepath="$PROJECT_DIR$/DoConnectMobi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apache-httpcomponents-httpclient/apache-httpcomponents-httpclient.iml" filepath="$PROJECT_DIR$/apache-httpcomponents-httpclient/apache-httpcomponents-httpclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/commons-logging-1.1.1/commons-logging-1.1.1.iml" filepath="$PROJECT_DIR$/commons-logging-1.1.1/commons-logging-1.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/google-http-client-1.15.0-rc/google-http-client-1.15.0-rc.iml" filepath="$PROJECT_DIR$/google-http-client-1.15.0-rc/google-http-client-1.15.0-rc.iml" />
