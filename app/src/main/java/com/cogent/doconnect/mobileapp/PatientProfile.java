@@ -122,8 +122,6 @@ class LoadProfile extends AsyncTask<String, String, String> {
 
          profile = getPatientProfile();
 
-
-
         return null;
     }
 
