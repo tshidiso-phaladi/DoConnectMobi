@@ -9,7 +9,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/apache-httpcomponents-httpclient" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commons-logging-1.1.1" />
             <option value="$PROJECT_DIR$/google-http-client-1.15.0-rc" />
