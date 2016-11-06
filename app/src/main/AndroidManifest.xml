@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/doctoricon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -15,32 +15,63 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity
-            android:name=".AppointmentsActivity"
-            android:label="@string/title_activity_appointments"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".BookAppointmentActivity"
-            android:label="@string/title_activity_book_appointment"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".PatientProfileActivity"
-            android:label="@string/title_activity_patient_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".DoctorProfileActivity"
-            android:label="@string/title_activity_doctor_profile"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ViewMedicalHistoryActivity"
-            android:label="@string/title_activity_view_medical_history"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ViewMedicalHistoryItemActivity"
-            android:label="@string/title_activity_view_medical_history_item"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".PatientProfileActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.PATIENTPROFILEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegistrationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.REGISTRATIONACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
+    <activity android:name=".AppointmentsActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.APPOINTMENTSACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".BookAppointmentActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOKAPPOINTMENTACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".DoctorProfileActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.DOCTORPROFILEACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".RegistrationProfileActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.REGISTRATIONACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".ViewMedicalHistoryActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEWMEDICALHISTORYACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".ViewMedicalHistoryItemActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEWMEDICALHISTORYITEMACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
 
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
